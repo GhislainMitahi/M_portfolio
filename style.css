@@ -72,8 +72,12 @@ header {
   text-align: center;
 }
 
-.presentation .content .intros {
+.presentation .content h2 {
   color: rgb(6, 141, 6);
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: bold;
+  
 }
 
 .presentation .content .text {
