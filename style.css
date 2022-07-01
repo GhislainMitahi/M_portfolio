@@ -8,8 +8,8 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 100%;
 }
 
 header {
@@ -45,7 +45,156 @@ header {
   margin: 5px 0 5px 0;
 }
 
-.presentation {
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+section .presentation {
+  background-image: url(assets/capt.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section .presentation h1 {
+  text-align: center;
+}
+
+section .presentation h2 {
+  color: rgb(6, 141, 6);
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: bold;
+}
+
+section .presentation .text {
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+
+section .presentation .icons {
+  align-self: center;
+  row-gap: 10px;
+  list-style-type: none;
+  display: flex;
+}
+
+section .presentation .icons i {
+  margin: 10px;
+  color: rgb(51, 49, 49);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(51, 49, 49);
+}
+
+section .works {
+  display: grid;
+  height: auto;
+  width: 100%;
+  gap: 50px;
+}
+
+section .works .more {
+  justify-self: center;
+  border: solid 1px rgb(168, 167, 167);
+  padding: 10px;
+  border-radius: 50px;
+  width: 52px;
+  font-size: 25px;
+  color: #172b4d;
+  text-align: center;
+}
+
+section .works .works-title {
+  color: #172b4d;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  justify-self: center;
+}
+
+section .works .columns {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+section .works .columns .card {
+  display: grid;
+  background-color: #e5e5e5;
+  border: solid 1px rgb(168, 167, 167);
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+section .works .columns .card .works-heading {
+  height: 250px;
+}
+
+section .works .columns .card .works-footer {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 15px;
+  height: auto;
+  border-radius: 8px;
+}
+
+section .works .columns .card .works-footer .Project-title {
+  text-align: center;
+  color: #3a4a42;
+  font-size: 24px;
+  line-height: 32px;
+  word-wrap: break-word;
+  font-weight: bold;
+  width: 100%;
+}
+
+section .works .columns .card .works-footer .list-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  list-style-type: none;
+}
+
+section .works .columns .card .works-footer .list-inline li {
+  background-color: #e5e5e5;
+  color: #3a4a42;
+  font-weight: 600;
+  padding: 0.5em;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+section .works .columns .card .works-footer .btn {
+  background: #36b37f;
+  border-radius: 4px;
+  padding: 0.5em;
+  font-weight: 20;
+  font-size: 17px;
+  color: #fff;
+  margin: 10px;
+}
+
+section .about {
   background-image: url(assets/capt.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -55,45 +204,35 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
   width: 100%;
+  gap: 20px;
 }
 
-.presentation .content {
-  margin-top: 60px;
-  width: 90%;
+section .about .about-title {
+  color: #172b4d;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+section .about .about-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
 }
 
-.presentation .content h1 {
+section .about .about-content .about-text {
   text-align: center;
 }
 
-.presentation .content h2 {
-  color: rgb(6, 141, 6);
-  font-size: 1.4em;
-  text-align: center;
-  font-weight: bold;
-}
-
-.presentation .content .text {
-  text-align: center;
-  margin: 50px 0 50px 0;
-}
-
-.presentation .content .icons {
-  align-self: center;
-  row-gap: 10px;
-  list-style-type: none;
-  display: flex;
-}
-
-.presentation .content .icons i {
-  margin: 10px;
-  color: rgb(51, 49, 49);
-}
-
-a {
-  text-decoration: none;
-  color: rgb(51, 49, 49);
+section .about .about-btn {
+  background: #36b37f;
+  border-radius: 4px;
+  padding: 0.5em;
+  font-weight: 20;
+  font-size: 17px;
+  color: #fff;
 }
