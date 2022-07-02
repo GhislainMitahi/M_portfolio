@@ -68,18 +68,31 @@ section .presentation {
 
 section .presentation h1 {
   text-align: center;
+  color: #172b4d;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-size: 40px;
+  font-weight: 700;
+  justify-self: center;
+  margin-top: 60px;
 }
 
 section .presentation h2 {
-  color: rgb(6, 141, 6);
-  font-size: 1.4em;
+  color: #36b37f;
   text-align: center;
-  font-weight: bold;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-size: 40px;
+  font-weight: 700;
+  justify-self: center;
+  margin-bottom: 40px;
 }
 
 section .presentation .text {
   text-align: center;
-  margin: 50px 0 50px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: sans-serif, 'Inter', 'Arial';
 }
 
 section .presentation .icons {
@@ -100,10 +113,11 @@ a {
 }
 
 section .works {
-  display: grid;
-  height: auto;
-  width: 100%;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 section .works .more {
@@ -119,18 +133,26 @@ section .works .more {
 
 section .works .works-title {
   color: #172b4d;
+  font-family: sans-serif, 'Inter', 'Arial';
+  width: 80%;
   font-size: 40px;
   font-weight: 700;
   text-align: center;
   justify-self: center;
 }
 
+section .works .works-title .works::after {
+  content: " ";
+  display: block;
+  height: 5px;
+  width: 50px;
+  background: #36b37f;
+}
+
 section .works .columns {
   display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
-  gap: 50px;
-  width: 100%;
+  width: 90%;
+  gap: 20px;
 }
 
 section .works .columns .card {
@@ -152,13 +174,25 @@ section .works .columns .card .works-footer {
   flex-direction: column;
   align-items: center;
   padding: 8px;
-  gap: 15px;
+  gap: 20px;
   height: auto;
+  border-radius: 8px;
+}
+
+section .category .list li {
+  background: #ffff;
+  font-family: sans-serif, 'Inter', 'Arial';
+  color: #36b37f;
+  font-style: normal;
+  font-weight: 600;
+  padding: 12px 10px;
+  font-size: 13px;
   border-radius: 8px;
 }
 
 section .works .columns .card .works-footer .Project-title {
   text-align: center;
+  font-family: sans-serif, 'Inter', 'Arial';
   color: #3a4a42;
   font-size: 24px;
   line-height: 32px;
@@ -169,37 +203,44 @@ section .works .columns .card .works-footer .Project-title {
 
 section .works .columns .card .works-footer .list-inline {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
-  align-items: center;
   list-style-type: none;
 }
 
 section .works .columns .card .works-footer .list-inline li {
-  background-color: #e5e5e5;
+  background: #ebf0ee;
+  font-family: sans-serif, 'Inter', 'Arial';
   color: #3a4a42;
+  font-style: normal;
   font-weight: 600;
-  padding: 0.5em;
+  padding: 12px 10px;
   font-size: 13px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 section .works .columns .card .works-footer .btn {
   background: #36b37f;
+  font-family: sans-serif, 'Inter', 'Arial';
   border-radius: 4px;
-  padding: 0.5em;
+  padding: 12px;
   font-weight: 20;
   font-size: 17px;
   color: #fff;
   margin: 10px;
+  border: none;
 }
 
 section .about {
-  background-image: url(assets/capt.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-origin: content-box;
-  background-size: cover;
+  background-image: url(assets/group1.svg), url(assets/group2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, right top;
+  background-position-x: -19%, 112%;
+  background-position-y: 109%, -9%;
+  background-size: 100px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,10 +251,13 @@ section .about {
 }
 
 section .about .about-title {
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-style: normal;
+  font-weight: 700;
   color: #172b4d;
   font-size: 40px;
-  font-weight: 700;
   text-align: center;
+  padding-top: 20px;
 }
 
 section .about .about-content {
@@ -226,6 +270,11 @@ section .about .about-content {
 
 section .about .about-content .about-text {
   text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: sans-serif, 'Inter', 'Arial';
 }
 
 section .about .about-btn {
@@ -235,4 +284,60 @@ section .about .about-btn {
   font-weight: 20;
   font-size: 17px;
   color: #fff;
+  border: none;
+}
+
+section .category {
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5e5;
+  border: solid 1px rgb(168, 167, 167);
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+section .all-categories {
+  display: grid;
+  width: 90%;
+  gap: 20px;
+}
+
+section .all-categories .category .image-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+section .category .categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  padding: 8px;
+  gap: 30px;
+  height: auto;
+  border-radius: 8px;
+}
+
+section .category .categories-title {
+  text-align: center;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #344563;
+}
+
+section .category .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+  margin-bottom: 30px;
 }
