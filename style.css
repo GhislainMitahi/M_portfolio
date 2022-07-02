@@ -101,12 +101,12 @@ section .presentation .icons {
   row-gap: 10px;
   list-style-type: none;
   display: flex;
-  margin: 20px 0px 30px 0px;
+  margin: 20px 0 30px 0;
 }
 
 section .presentation .icons i {
   margin: 10px;
-  color: #505F79;
+  color: #505f79;
   font-size: 25px;
 }
 
