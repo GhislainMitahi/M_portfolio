@@ -206,9 +206,9 @@ section .works .columns .card .works-footer .Project-title {
 }
 
 section .works .columns .card .works-footer .list-inline {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
@@ -224,6 +224,9 @@ section .works .columns .card .works-footer .list-inline li {
   padding: 12px 10px;
   font-size: 13px;
   border-radius: 8px;
+  margin: 0px 10px 10px 0px;
+  gap: 10px;
+  float:left;
 }
 
 section .works .columns .card .works-footer .btn {
