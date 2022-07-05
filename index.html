@@ -175,17 +175,17 @@
         </div>
     </div>
 </div>
-<form class="contact_forms">
+<form class="contact_forms" action="/index.html" method="post">
     <p class="text">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
     <ul class="form_field">
         <li class="form_name">
-            <input type="text" id="first_name" name="first_name" class="input" placeholder="Full Name">
+            <input type="text" id="first_name" name="first_name" class="input" placeholder="Full Name" minlength="6" required>
         </li>
         <li class="form_email"> 
-            <input type="email" id="email" name="email" class="input" placeholder="Email Address">
+            <input type="email" id="email" name="email" class="input" placeholder="Email Address" required>
         </li>
         <li class="form_text">
-           <textarea name="text" id="message" cols="32" rows="6" placeholder="Entre text here"></textarea>
+           <textarea name="text" id="message" cols="32" rows="6" placeholder="Entre text here" minlength="500" required></textarea>
         </li>
         <li class="form_button">
             <input type="submit" value="Get in touch" class="the-btn"/>
