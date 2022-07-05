@@ -8,8 +8,8 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 100%;
 }
 
 header {
@@ -45,55 +45,306 @@ header {
   margin: 5px 0 5px 0;
 }
 
-.presentation {
-  background-image: url(assets/capt.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-origin: content-box;
-  background-size: cover;
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 50px;
 }
 
-.presentation .content {
-  margin-top: 60px;
-  width: 90%;
+section .presentation {
+  background-image: url(assets/capt.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  margin-top: 30px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.presentation .content h1 {
+section .presentation h1 {
   text-align: center;
+  color: #172b4d;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-size: 40px;
+  font-weight: 700;
+  justify-self: center;
+  margin-top: 35px;
 }
 
-.presentation .content h2 {
-  color: rgb(6, 141, 6);
-  font-size: 1.4em;
+section .presentation h2 {
+  color: #36b37f;
   text-align: center;
-  font-weight: bold;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-size: 40px;
+  font-weight: 700;
+  justify-self: center;
+  margin-bottom: 40px;
 }
 
-.presentation .content .text {
+section .presentation .text {
+  color: #42526e;
   text-align: center;
-  margin: 50px 0 50px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0 10px 0 10px;
+  font-family: sans-serif, 'Inter', 'Arial';
 }
 
-.presentation .content .icons {
+section .presentation .icons {
   align-self: center;
   row-gap: 10px;
   list-style-type: none;
   display: flex;
+  margin: 20px 0 30px 0;
 }
 
-.presentation .content .icons i {
+section .presentation .icons i {
   margin: 10px;
-  color: rgb(51, 49, 49);
+  color: #505f79;
+  font-size: 25px;
 }
 
 a {
   text-decoration: none;
   color: rgb(51, 49, 49);
+}
+
+section .works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+section .works .more {
+  justify-self: center;
+  border: solid 1px rgb(168, 167, 167);
+  padding: 10px;
+  border-radius: 50px;
+  width: 52px;
+  font-size: 25px;
+  color: #172b4d;
+  text-align: center;
+}
+
+section .works .works-title {
+  color: #172b4d;
+  font-family: sans-serif, 'Inter', 'Arial';
+  width: 80%;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  justify-self: center;
+}
+
+section .works .works-title .works::after {
+  content: " ";
+  display: block;
+  height: 5px;
+  width: 50px;
+  background: #36b37f;
+}
+
+section .works .columns {
+  display: grid;
+  width: 90%;
+  gap: 20px;
+}
+
+section .works .columns .card {
+  display: grid;
+  background-color: #e5e5e5;
+  border: solid 1px rgb(168, 167, 167);
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+section .works .columns .card .works-heading {
+  height: 250px;
+}
+
+section .works .columns .card .works-footer {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 20px;
+  height: auto;
+  border-radius: 8px;
+}
+
+section .category .list li {
+  background: #ffff;
+  font-family: sans-serif, 'Inter', 'Arial';
+  color: #36b37f;
+  font-style: normal;
+  font-weight: 600;
+  padding: 12px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+section .works .columns .card .works-footer .Project-title {
+  text-align: center;
+  font-family: sans-serif, 'Inter', 'Arial';
+  color: #3a4a42;
+  font-size: 24px;
+  line-height: 32px;
+  word-wrap: break-word;
+  font-weight: bold;
+  width: 100%;
+}
+
+section .works .columns .card .works-footer .list-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  list-style-type: none;
+}
+
+section .works .columns .card .works-footer .list-inline li {
+  background: #ebf0ee;
+  font-family: sans-serif, 'Inter', 'Arial';
+  color: #3a4a42;
+  font-style: normal;
+  font-weight: 600;
+  padding: 12px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+section .works .columns .card .works-footer .btn {
+  background: #36b37f;
+  font-family: sans-serif, 'Inter', 'Arial';
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: 20;
+  font-size: 17px;
+  color: #fff;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+section .about {
+  background-image: url(assets/group1.svg), url(assets/group2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, right top;
+  background-position-x: -19%, 112%;
+  background-position-y: 109%, -9%;
+  background-size: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  gap: 20px;
+}
+
+section .about .about-title {
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  color: #172b4d;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+section .about .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+}
+
+section .about .about-content .about-text {
+  color: #42526e;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: sans-serif, 'Inter', 'Arial';
+}
+
+section .about .about-btn {
+  background: #36b37f;
+  border-radius: 4px;
+  padding: 0.5em;
+  font-weight: 20;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+section .category {
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5e5;
+  border: solid 1px rgb(168, 167, 167);
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+section .all-categories {
+  display: grid;
+  width: 90%;
+  gap: 20px;
+}
+
+section .all-categories .category .image-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+section .category .categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  padding: 8px;
+  gap: 30px;
+  height: auto;
+  border-radius: 8px;
+}
+
+section .category .categories-title {
+  text-align: center;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #344563;
+}
+
+section .category .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+  margin-bottom: 30px;
 }
