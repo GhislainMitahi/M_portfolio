@@ -348,3 +348,42 @@ section .category .list {
   list-style-type: none;
   margin-bottom: 30px;
 }
+
+#topic{
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 10px;
+  
+  }
+
+  .form_field{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+.form_name{
+  box-sizing: border-box;
+  bottom: 0px;
+  background: #FFFFFF;
+  border: 1px solid #D0D9D4;
+  border-radius: 4px;
+}
+
+.form-btn {
+  background: #36b37f;
+  font-family: sans-serif, 'Inter', 'Arial';
+  border-radius: 4px;
+  height: 10px;
+  padding: 12px;
+  font-weight: 20;
+  font-size: 17px;
+  color: #fff;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
