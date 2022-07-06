@@ -116,6 +116,12 @@ a {
   color: rgb(51, 49, 49);
 }
 
+section .contact_forms .form_field li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 section .works {
   display: flex;
   flex-direction: column;
@@ -347,4 +353,120 @@ section .category .list {
   gap: 10px;
   list-style-type: none;
   margin-bottom: 30px;
+}
+
+section .contact_forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+section .contact_forms .text {
+  text-align: center;
+  color: #172b4d;
+  font-family: sans-serif, 'Inter', 'Arial';
+  font-size: 40px;
+  font-weight: 700;
+  justify-self: center;
+  padding: 5px;
+}
+
+section .contact_forms .form_field {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section .contact_forms .form_field li input {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  padding-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #6b778c;
+}
+
+section .contact_forms .form_field li input::placeholder {
+  font-family: sans-serif, 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #6b778c;
+}
+
+section .contact_forms .form_field li textarea {
+  background: #fff;
+  border: 1px solid #60c095;
+  border-radius: 4px;
+  padding-left: 10px;
+  font-family: 'Inter'sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #091e42;
+}
+
+section .contact_forms .form_field li textarea::placeholder {
+  font-family: 'Inter'sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #091e42;
+}
+
+section .contact_forms .form_field .form_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .contact_forms .form_field .the-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background: #36b37f;
+  border-radius: 4px;
+  padding: 0 10px 0 10px;
+  font-weight: 20;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+section .contact_forms .icons {
+  display: flex;
+  row-gap: 10px;
+  list-style-type: none;
+}
+
+section .contact_forms .icons i {
+  margin: 10px;
+  color: #505f79;
+  font-size: 25px;
+}
+
+section .contact_forms .e_mail {
+  font-family: 'Inter'sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526e;
+  padding-bottom: 10px;
 }
