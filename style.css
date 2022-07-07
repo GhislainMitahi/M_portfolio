@@ -270,6 +270,10 @@ section .works .columns .card .works-footer .btn {
   cursor: pointer;
 }
 
+section .works .columns .card .works-footer .btn:hover {
+  background: #06834f;
+}
+
 section .about {
   background-image: url(assets/group1.svg), url(assets/group2.svg);
   background-repeat: no-repeat, no-repeat;
@@ -323,6 +327,10 @@ section .about .about-btn {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+section .about .about-btn:hover {
+  background: #06834f;
 }
 
 section .category {
@@ -473,6 +481,10 @@ section .contact_forms .form_field .the-btn {
   cursor: pointer;
 }
 
+section .contact_forms .form_field .the-btn:hover {
+  background: #06834f;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -498,7 +510,7 @@ footer .e_mail {
     background-repeat: no-repeat;
     background-position: center;
     background-origin: content-box;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 
   .head-content .nav .fa-solid,
@@ -515,9 +527,14 @@ footer .e_mail {
 
   .head-content .nav .menu {
     display: flex;
-    color: #091e42;
+    color: #172b4d;
     list-style-type: none;
     gap: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 32px;
+    font-family: sans-serif, 'Inter', 'Arial';
   }
 
   section {
