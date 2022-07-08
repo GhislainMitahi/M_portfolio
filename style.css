@@ -454,6 +454,11 @@ section .contact_forms .icons {
   list-style-type: none;
 }
 
+.fa-brands:hover, .fa-solid:hover{
+  transform: scale(2.5);
+
+}
+
 section .contact_forms .icons i {
   margin: 10px;
   color: #505f79;
