@@ -8,6 +8,8 @@ This project is about to give me a handle as a student on how to create a web si
 
 - Html & CSS
 
+## Live demo
+https://ghislainmitahi.github.io/M_portfolio.github.io/
 
 ## Getting Started
 
