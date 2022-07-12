@@ -29,23 +29,14 @@ header {
 }
 
 .head-content .logo {
-  font-size: 20px;
-  font-weight: normal;
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 28px;
-}
-.logo a{
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  
 }
-label{
+
+label {
   display: none;
 }
 
