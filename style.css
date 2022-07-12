@@ -29,8 +29,15 @@ header {
 }
 
 .head-content .logo {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
   font-size: 20px;
-  font-weight: normal;
+  line-height: 28px;
+}
+
+label {
+  display: none;
 }
 
 .head-content .nav {
