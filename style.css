@@ -112,13 +112,12 @@ label {
   display: flex;
   flex-direction: column;
   align-items: start;
-font-size:25px;
+  font-size: 25px;
   justify-content: center;
   height: 100vh;
   width: 100%;
   gap: 50px;
   list-style: none;
-
 }
 
 footer .icons i {
@@ -520,7 +519,7 @@ section .contact_forms .form_field li textarea {
   border: 1px solid #60c095;
   border-radius: 4px;
   padding-left: 10px;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -529,7 +528,7 @@ section .contact_forms .form_field li textarea {
 }
 
 section .contact_forms .form_field li textarea::placeholder {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -571,7 +570,7 @@ footer {
 }
 
 footer .e_mail {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
