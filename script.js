@@ -1,16 +1,8 @@
-let icon = document.querySelector('.fa-solid');
+let button = document.querySelector('.button');
 
-let header = document.querySelector('header');
+let navToggle = document.querySelector('.nav');
 
-let menu = document.querySelector('.menu');
-
-
-icon.addEventListener('click',()=>{
-    icon.classList.replace('fa-bars','fa-x');
-    header.classList.add("activeheader");
-    menu.classList.add("activemen");
-
-
-
-
+button.addEventListener('click',()=>{
+    button.classList.toggle('active');
+    navToggle.classList.toggle("active");
 })
