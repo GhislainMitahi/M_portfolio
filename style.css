@@ -19,6 +19,16 @@ header {
   width: 100%;
   height: 50px;
 }
+.activeheader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  position:fixed;
+}
 
 .head-content {
   display: flex;
@@ -47,8 +57,22 @@ label {
   position: relative;
 }
 
-.head-content .nav .menu {
-  display: none;
+
+ header .menu {
+ display: none;
+  
+}
+.activeMenu{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 300px;
+  width: 100%;
+  list-style: none;
+ gap:10px
+  
 }
 
 footer .icons i {
