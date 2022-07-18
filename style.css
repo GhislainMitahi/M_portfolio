@@ -62,7 +62,7 @@ label {
  display: none;
   
 }
-.activeMenu{
+.activemenu{
   display: flex;
   flex-direction:column;
   align-items: center;
