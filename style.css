@@ -12,14 +12,7 @@ body {
   width: 100%;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-}
-.activeheader {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,15 +20,16 @@ header {
   width: 100%;
   height: auto;
   background-color: #fff;
-  position:fixed;
+  position: fixed;
 }
 
 .head-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
+  padding: 0 25px 0 25px;
 }
 
 .head-content .logo {
@@ -50,29 +44,83 @@ label {
   display: none;
 }
 
-.head-content .nav {
-  padding-top: 12px;
-  width: 50px;
-  height: 100%;
-  position: relative;
-}
-
-
- header .menu {
- display: none;
-  
-}
-.activemen{
+.head-content .button {
+  position: fixed;
+  z-index: 10;
+  top: 10px;
+  right: 30px;
+  height: 15px;
+  width: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
   display: flex;
-  flex-direction:column;
-  align-items: center;
   justify-content: center;
-  background: #fff;
-  height: 300px;
+  align-items: center;
+  background: transparent;
+}
+
+.head-content .button span {
+  position: absolute;
+  display: block;
   width: 100%;
+  height: 2px;
+  background: black;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.head-content .button span::before,
+.head-content .button span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: black;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.head-content .button span::before {
+  transform: translateY(8px);
+}
+
+.head-content .button span::after {
+  transform: translateY(-8px);
+}
+
+.head-content .button.active span::before {
+  transform: translateY(0) rotateZ(45deg);
+}
+
+.head-content .button.active span::after {
+  transform: translateY(0) rotateZ(-45deg);
+}
+
+.head-content .button.active span {
+  background: transparent;
+}
+
+.header .nav .menu {
+  display: none;
+}
+
+.header .nav.active .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  gap: 50px;
   list-style: none;
- gap:10px
-  
+  font-size: 25px;
+  transition:
+    height 0.3s ease-out,
+    opacity 0.1s ease-out;
 }
 
 footer .icons i {
@@ -544,21 +592,22 @@ footer .e_mail {
     background-size: 100% 100%;
   }
 
-  .head-content .nav .fa-solid,
+  .head-content,
   .head-content .logo {
     display: none;
   }
 
-  .head-content .nav {
+  .header .nav {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .head-content .nav .menu {
+  .header .nav .menu {
     display: flex;
     color: #172b4d;
+    background: transparent;
     list-style-type: none;
     gap: 15px;
     font-style: normal;
