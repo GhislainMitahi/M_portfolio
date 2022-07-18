@@ -8,9 +8,5 @@ let menu = document.querySelector('.menu');
 icon.addEventListener('click',()=>{
     icon.classList.replace('fa-bars','fa-x');
     header.classList.add("activeheader");
-    menu.classList.add("activemenu");
-
-
-
-
+    menu.classList.add("activemen");
 })
