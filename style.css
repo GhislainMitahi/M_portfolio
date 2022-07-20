@@ -628,11 +628,16 @@ footer .e_mail {
 
 .closeTab {
   border-radius: 8px;
-  font-size: 40px;
-  color: black;
+  padding: 5px 8px;
+  margin-bottom: 10px;
   position: relative;
+  background: #ebecf0;
   top: 0;
   left: 95%;
+}
+
+.fa-solid.fa-xmark {
+  color: #67798e;
 }
 
 .popop-image {
