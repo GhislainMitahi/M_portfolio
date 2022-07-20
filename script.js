@@ -154,7 +154,7 @@ function popop(e) {
   popop.innerHTML = `
   <div class="popop-container">
   <div class="project-img">
-      <i class="fa-solid fa-xmark closeTab"></i>
+    <i class="fa-solid fa-xmark closeTab"></i>
     <img src="${currentWork.popopDescription.imageSrc}" class="popop-image">
   </div>
   
@@ -220,3 +220,52 @@ const clickClick = document.querySelectorAll('.btn');
 clickClick.forEach((e) => {
   e.addEventListener('click', popop);
 });
+
+const form = document.getElementsByTagName('form')[0];
+
+const email = document.getElementById('email');
+const emailError = document.querySelector('#error');
+const reg = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+
+email.addEventListener('input', () => {
+  if (reg.test(email.value)) {
+    emailError.innerHTML = '';
+    email.classList.remove('invalid');
+  }
+});
+
+form.addEventListener('submit', (event) => {
+  if (!reg.test(email.value.trim())) {
+    email.classList.add('invalid');
+    emailError.innerHTML = 'Error: "Email should be in lowercase"';
+    event.preventDefault();
+  }
+});
+
+function toStore() {
+  const storeForm = {
+    name: '',
+    email: '',
+    text: '',
+  };
+
+  storeForm.name = document.getElementById('name').value;
+  storeForm.email = document.getElementById('email').value;
+  storeForm.text = document.getElementById('text').value;
+
+  localStorage.setItem('storeForm', JSON.stringify(storeForm));
+}
+document.getElementById('name').addEventListener('input', toStore);
+document.getElementById('email').addEventListener('input', toStore);
+document.getElementById('text').addEventListener('input', toStore);
+
+function toFill() {
+  const restoredSession = JSON.parse(localStorage.getItem('storeForm'));
+  if (Object.keys(restoredSession).length > 0) {
+    document.getElementById('name').value = restoredSession.name;
+    document.getElementById('email').value = restoredSession.email;
+    document.getElementById('text').value = restoredSession.text;
+  }
+}
+
+window.onload = toFill();

@@ -11,7 +11,18 @@ body {
   height: auto;
   width: 100%;
 }
-
+.error {
+  padding: 8px;
+  color: red;
+  width: 50%;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  margin-left: 225px;
+}
+.invalid {
+  border: 1px solid red;
+}
 .header {
   display: flex;
   flex-direction: column;
