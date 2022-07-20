@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  box-shadow: 'poppins', sans-serif;
+  box-shadow: "poppins", sans-serif;
 }
 
 body {
@@ -12,43 +12,136 @@ body {
   width: 100%;
 }
 
-header {
+.header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: auto;
+  background-color: #fff;
+  position: fixed;
 }
 
 .head-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
+  padding: 20px 25px 0 25px;
 }
 
 .head-content .logo {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(51, 49, 49);
+}
+
+.head-content.active .logo a {
+  visibility: hidden;
+}
+
 label {
   display: none;
 }
 
-.head-content .nav {
-  padding-top: 12px;
-  width: 50px;
-  height: 100%;
-  position: relative;
+.head-content .button {
+  position: fixed;
+  z-index: 10;
+  right: 30px;
+  height: 15px;
+  width: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
 }
 
-.head-content .nav .menu {
+.head-content .button span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #67798e;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.head-content .button span::before,
+.head-content .button span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #67798e;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.head-content .button span::before {
+  transform: translateY(8px);
+}
+
+.head-content .button span::after {
+  transform: translateY(-8px);
+}
+
+.head-content .button.active span::before {
+  transform: translateY(0) rotateZ(45deg);
+}
+
+.head-content .button.active span::after {
+  transform: translateY(0) rotateZ(-45deg);
+}
+
+.head-content .button.active span {
+  background: transparent;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.header .nav .menu {
   display: none;
+}
+
+.header .nav.active .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  gap: 8px;
+  list-style: none;
+  padding: 25px 0 0 25px;
+}
+
+.header .nav.active .menu li a {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 44px;
+  color: #3a4a42;
 }
 
 footer .icons i {
@@ -89,7 +182,7 @@ section .presentation {
 section .presentation h1 {
   text-align: center;
   color: #172b4d;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   font-size: 40px;
   font-weight: 700;
   justify-self: center;
@@ -99,7 +192,7 @@ section .presentation h1 {
 section .presentation h2 {
   color: #36b37f;
   text-align: center;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   font-size: 40px;
   font-weight: 700;
   justify-self: center;
@@ -114,7 +207,7 @@ section .presentation .text {
   font-size: 20px;
   line-height: 32px;
   margin: 0 10px 0 10px;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
 }
 
 footer .icons {
@@ -148,11 +241,6 @@ section .presentation .more {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(51, 49, 49);
-}
-
 section .contact_forms .form_field li {
   display: flex;
   justify-content: center;
@@ -169,7 +257,7 @@ section .works {
 
 section .works .works-title {
   color: #172b4d;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   width: 80%;
   font-size: 40px;
   font-weight: 700;
@@ -223,7 +311,7 @@ section .works .columns .card .works-footer {
 
 section .category .list li {
   background: #ffff;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   color: #36b37f;
   font-style: normal;
   font-weight: 600;
@@ -234,7 +322,7 @@ section .category .list li {
 
 section .works .columns .card .works-footer .Project-title {
   text-align: center;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   color: #3a4a42;
   font-size: 24px;
   line-height: 32px;
@@ -255,7 +343,7 @@ section .works .columns .card .works-footer .list-inline {
 
 section .works .columns .card .works-footer .list-inline li {
   background: #ebf0ee;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   color: #3a4a42;
   font-style: normal;
   font-weight: 600;
@@ -266,7 +354,7 @@ section .works .columns .card .works-footer .list-inline li {
 
 section .works .columns .card .works-footer .btn {
   background: #36b37f;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   border-radius: 4px;
   padding: 12px;
   font-weight: 20;
@@ -298,7 +386,7 @@ section .about {
 }
 
 section .about .about-title {
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   font-style: normal;
   font-weight: 700;
   color: #172b4d;
@@ -322,7 +410,7 @@ section .about .about-content .about-text {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
 }
 
 section .about .about-btn {
@@ -376,7 +464,7 @@ section .category .categories {
 
 section .category .categories-title {
   text-align: center;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -407,7 +495,7 @@ section .contact_forms {
 section .contact_forms .text {
   text-align: center;
   color: #172b4d;
-  font-family: sans-serif, 'Inter', 'Arial';
+  font-family: sans-serif, "Inter", "Arial";
   font-size: 40px;
   font-weight: 700;
   justify-self: center;
@@ -428,7 +516,7 @@ section .contact_forms .form_field li input {
   border: 1px solid #d0d9d4;
   border-radius: 4px;
   padding-left: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -437,7 +525,7 @@ section .contact_forms .form_field li input {
 }
 
 section .contact_forms .form_field li input::placeholder {
-  font-family: sans-serif, 'Inter';
+  font-family: sans-serif, "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -450,7 +538,7 @@ section .contact_forms .form_field li textarea {
   border: 1px solid #60c095;
   border-radius: 4px;
   padding-left: 10px;
-  font-family: 'Inter'sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -459,7 +547,7 @@ section .contact_forms .form_field li textarea {
 }
 
 section .contact_forms .form_field li textarea::placeholder {
-  font-family: 'Inter'sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -501,7 +589,7 @@ footer {
 }
 
 footer .e_mail {
-  font-family: 'Inter'sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -520,28 +608,29 @@ footer .e_mail {
     background-size: 100% 100%;
   }
 
-  .head-content .nav .fa-solid,
+  .head-content,
   .head-content .logo {
     display: none;
   }
 
-  .head-content .nav {
+  .header .nav {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .head-content .nav .menu {
+  .header .nav .menu {
     display: flex;
     color: #172b4d;
+    background: transparent;
     list-style-type: none;
     gap: 15px;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 32px;
-    font-family: sans-serif, 'Inter', 'Arial';
+    font-family: sans-serif, "Inter", "Arial";
   }
 
   section {
@@ -637,7 +726,7 @@ footer .e_mail {
   section .contact_forms .text {
     margin-top: -60px;
     width: 40%;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
