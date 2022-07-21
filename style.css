@@ -631,6 +631,7 @@ footer .e_mail {
   background-color: #c1c7d0;
   padding: 16px 20px;
   z-index: 20;
+  transition: 300ms ease-in-out;
 }
 
 .popop-container {

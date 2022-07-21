@@ -130,15 +130,13 @@ for (let i = 0; i < works.length; i += 1) {
                       <input id="${works[i].id}" type="submit" value="See Project" class="btn" />
                       </div>
                       `;
-  const content = document.querySelector('.columns');
-  content.appendChild(card);
+  document.querySelector('.columns').appendChild(card);
 }
 
 const Body = document.body;
 
 function popop(e) {
   const clickButton = e.target.getAttribute('id');
-
   let currentWork = [];
 
   works.forEach((work) => {
@@ -200,7 +198,7 @@ function popop(e) {
 
   document.querySelector('.closeTab').addEventListener('click', () => {
     document.body = Body;
-    window.location.href = 'index.html#My-works';
+    window.location.href = 'index.html';
   });
 
   document.querySelectorAll('.see-lives').forEach((e) => {
@@ -216,9 +214,9 @@ function popop(e) {
   });
 }
 
-const clickClick = document.querySelectorAll('.btn');
-clickClick.forEach((e) => {
-  e.addEventListener('click', popop);
+const ClickseeProBtn = document.querySelectorAll('.btn');
+ClickseeProBtn.forEach((project) => {
+  project.addEventListener('click', popop);
 });
 
 const form = document.getElementsByTagName('form')[0];
@@ -258,14 +256,3 @@ function toStore() {
 document.getElementById('name').addEventListener('input', toStore);
 document.getElementById('email').addEventListener('input', toStore);
 document.getElementById('text').addEventListener('input', toStore);
-
-function toFill() {
-  const restoredSession = JSON.parse(localStorage.getItem('storeForm'));
-  if (Object.keys(restoredSession).length > 0) {
-    document.getElementById('name').value = restoredSession.name;
-    document.getElementById('email').value = restoredSession.email;
-    document.getElementById('text').value = restoredSession.text;
-  }
-}
-
-window.onload = toFill();
