@@ -256,3 +256,14 @@ function toStore() {
 document.getElementById('name').addEventListener('input', toStore);
 document.getElementById('email').addEventListener('input', toStore);
 document.getElementById('text').addEventListener('input', toStore);
+
+function toFill() {
+  const restoredSession = JSON.parse(localStorage.getItem('storeForm'));
+  if (Object.keys(restoredSession).length > 0) {
+    document.getElementById('name').value = restoredSession.name;
+    document.getElementById('email').value = restoredSession.email;
+    document.getElementById('text').value = restoredSession.text;
+  }
+}
+
+window.onload = toFill();
