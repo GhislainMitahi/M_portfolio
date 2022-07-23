@@ -130,15 +130,13 @@ for (let i = 0; i < works.length; i += 1) {
                       <input id="${works[i].id}" type="submit" value="See Project" class="btn" />
                       </div>
                       `;
-  const content = document.querySelector('.columns');
-  content.appendChild(card);
+  document.querySelector('.columns').appendChild(card);
 }
 
 const Body = document.body;
 
 function popop(e) {
   const clickButton = e.target.getAttribute('id');
-
   let currentWork = [];
 
   works.forEach((work) => {
@@ -200,7 +198,7 @@ function popop(e) {
 
   document.querySelector('.closeTab').addEventListener('click', () => {
     document.body = Body;
-    window.location.href = 'index.html#My-works';
+    window.location.href = 'index.html';
   });
 
   document.querySelectorAll('.see-lives').forEach((e) => {
@@ -216,9 +214,9 @@ function popop(e) {
   });
 }
 
-const clickClick = document.querySelectorAll('.btn');
-clickClick.forEach((e) => {
-  e.addEventListener('click', popop);
+const ClickseeProBtn = document.querySelectorAll('.btn');
+ClickseeProBtn.forEach((project) => {
+  project.addEventListener('click', popop);
 });
 
 const form = document.getElementsByTagName('form')[0];
